@@ -23,6 +23,13 @@ namespace MvcMovie
                 name: "Hello",
                 url: "{controller}/{action}/{name}/{id}"
             );
+
+            routes.MapRoute(
+                name: "Movies",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
+);
+
         }
     }
 }
